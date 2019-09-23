@@ -14,7 +14,10 @@ public class Utils {
   public static boolean isANumberType(String creditCardNumber) {
     boolean valid = false;
     try {
-      Long.parseLong(creditCardNumber);
+      long number = Long.parseLong(creditCardNumber);
+      if (number <= 0) {
+          throw new NumberFormatException();
+      }
       valid = true;
     } catch (NumberFormatException nfe) {
       System.out.println("Wrong type inserted.");

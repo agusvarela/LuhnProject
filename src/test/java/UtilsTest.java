@@ -72,4 +72,11 @@ public class UtilsTest {
     assertThat(Utils.isANumberType(creditCardNumber), is(false));
     assertEquals("Wrong type inserted." + System.lineSeparator(), out.toString());
   }
+  
+  @Test
+  public void isNumberTypeIsFalseWithNegativeNumber() {
+    String creditCardNumber = "-40128888888";
+    assertThat(Utils.isANumberType(creditCardNumber), is(false));
+    assertEquals("Wrong type inserted." + System.lineSeparator(), out.toString());
+  }
 }

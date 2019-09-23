@@ -12,7 +12,6 @@ public class LuhnAlgorithm {
       int digit = creditCardNumber[i] * 2;
       creditCardNumber[i] = digit < 9 ? digit : digit - 9;
     }
-    System.out.println(Arrays.toString(creditCardNumber));
     int sum = Arrays.stream(creditCardNumber).sum();
     int reminder = sum % 10;
 
